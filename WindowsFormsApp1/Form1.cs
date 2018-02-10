@@ -54,7 +54,10 @@ namespace WindowsFormsApp1
 
         private void Run_Click(object sender, EventArgs e)
         {
+            // Add password
             listBox1.Items.Add(Passwordtext.Text);
+
+            // Add test day value
             listBox1.Items.Add(comboBox1.Text);
         }
 
