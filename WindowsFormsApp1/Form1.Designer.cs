@@ -40,18 +40,15 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.linkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.link1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.link2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.linkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.link1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.link2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.feedbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-            this.openFileDialog3 = new System.Windows.Forms.OpenFileDialog();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.openFileDialog4 = new System.Windows.Forms.OpenFileDialog();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -191,6 +188,19 @@
             this.toolStripMenuItem1.Text = "Menu";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
+            // clearAllToolStripMenuItem
+            // 
+            this.clearAllToolStripMenuItem.Name = "clearAllToolStripMenuItem";
+            this.clearAllToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.clearAllToolStripMenuItem.Text = "Clear All";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // linkToolStripMenuItem
             // 
             this.linkToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -200,6 +210,18 @@
             this.linkToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.linkToolStripMenuItem.Text = "Link";
             // 
+            // link1ToolStripMenuItem
+            // 
+            this.link1ToolStripMenuItem.Name = "link1ToolStripMenuItem";
+            this.link1ToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.link1ToolStripMenuItem.Text = "Link_1";
+            // 
+            // link2ToolStripMenuItem
+            // 
+            this.link2ToolStripMenuItem.Name = "link2ToolStripMenuItem";
+            this.link2ToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.link2ToolStripMenuItem.Text = "Link_2";
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -208,60 +230,23 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // link1ToolStripMenuItem
-            // 
-            this.link1ToolStripMenuItem.Name = "link1ToolStripMenuItem";
-            this.link1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.link1ToolStripMenuItem.Text = "Link_1";
-            // 
-            // link2ToolStripMenuItem
-            // 
-            this.link2ToolStripMenuItem.Name = "link2ToolStripMenuItem";
-            this.link2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.link2ToolStripMenuItem.Text = "Link_2";
-            // 
-            // clearAllToolStripMenuItem
-            // 
-            this.clearAllToolStripMenuItem.Name = "clearAllToolStripMenuItem";
-            this.clearAllToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.clearAllToolStripMenuItem.Text = "Clear All";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
             // feedbackToolStripMenuItem
             // 
             this.feedbackToolStripMenuItem.Name = "feedbackToolStripMenuItem";
-            this.feedbackToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.feedbackToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.feedbackToolStripMenuItem.Text = "Feedback";
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // openFileDialog2
-            // 
-            this.openFileDialog2.FileName = "openFileDialog2";
-            // 
-            // openFileDialog3
-            // 
-            this.openFileDialog3.FileName = "openFileDialog3";
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(52, 89);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(293, 22);
+            this.textBox2.Size = new System.Drawing.Size(263, 22);
             this.textBox2.TabIndex = 5;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // openFileDialog4
+            // folderBrowserDialog1
             // 
-            this.openFileDialog4.FileName = "openFileDialog4";
+            this.folderBrowserDialog1.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
             // 
             // Form1
             // 
@@ -312,11 +297,8 @@
         private System.Windows.Forms.ToolStripMenuItem link2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem feedbackToolStripMenuItem;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.OpenFileDialog openFileDialog2;
-        private System.Windows.Forms.OpenFileDialog openFileDialog3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.OpenFileDialog openFileDialog4;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }
 

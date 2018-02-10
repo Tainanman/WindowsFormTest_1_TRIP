@@ -59,11 +59,23 @@ namespace WindowsFormsApp1
 
             // Add test day value
             listBox1.Items.Add(comboBox1.Text);
+            folderBrowserDialog1.ShowDialog();
+            textBox1.Text = folderBrowserDialog1.SelectedPath;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void openFileDialog4_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
+        {
+
         }
     }
 }
