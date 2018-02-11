@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class TRIP : Form
     {
-        public Form1()
+        public TRIP()
         {
             InitializeComponent();
         }
@@ -59,8 +59,7 @@ namespace WindowsFormsApp1
 
             // Add test day value
             listBox1.Items.Add(comboBox1.Text);
-            folderBrowserDialog1.ShowDialog();
-            textBox1.Text = folderBrowserDialog1.SelectedPath;
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,6 +75,12 @@ namespace WindowsFormsApp1
         private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
         {
 
+        }
+
+        private void Openfolderbutton_Click(object sender, EventArgs e)
+        {
+            folderBrowserDialog1.ShowDialog();
+            textBox1.Text = folderBrowserDialog1.SelectedPath;
         }
     }
 }

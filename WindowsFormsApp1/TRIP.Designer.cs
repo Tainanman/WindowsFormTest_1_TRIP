@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class TRIP
     {
         /// <summary>
         /// 設計工具所需的變數。
@@ -49,6 +49,7 @@
             this.feedbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.openfolderbutton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -240,7 +241,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(52, 89);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(263, 22);
+            this.textBox2.Size = new System.Drawing.Size(291, 22);
             this.textBox2.TabIndex = 5;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -248,11 +249,22 @@
             // 
             this.folderBrowserDialog1.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
             // 
+            // openfolderbutton
+            // 
+            this.openfolderbutton.Location = new System.Drawing.Point(322, 91);
+            this.openfolderbutton.Name = "openfolderbutton";
+            this.openfolderbutton.Size = new System.Drawing.Size(19, 19);
+            this.openfolderbutton.TabIndex = 10;
+            this.openfolderbutton.Text = "...";
+            this.openfolderbutton.UseVisualStyleBackColor = true;
+            this.openfolderbutton.Click += new System.EventHandler(this.Openfolderbutton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 492);
+            this.Controls.Add(this.openfolderbutton);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.Passwordtext);
             this.Controls.Add(this.textBox2);
@@ -267,7 +279,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "TestResultIssueParser";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -299,6 +311,7 @@
         private System.Windows.Forms.ToolStripMenuItem feedbackToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Button openfolderbutton;
     }
 }
 
